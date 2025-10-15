@@ -1,0 +1,73 @@
+:host {
+  display: block;
+  --main-bg: #f5f8ff;
+  --accent: #552a6f;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+.wrap {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+/* CONTENEDOR PÍLDORA */
+.search {
+  width: 90vw;
+  max-width: 1200px;
+  background: var(--main-bg);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, .12);
+}
+
+/* GRID: input crece, botón ancho fijo */
+.search form {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: stretch;
+}
+
+.search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 16px;
+  padding: 14px 16px;
+  color: #222;
+}
+
+.search button {
+  border: 0;
+  cursor: pointer;
+  background: var(--accent);
+  color: #fff;
+  width: 56px;
+  display: grid;
+  place-items: center;
+  box-shadow: none;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  stroke: #fff;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Responsive */
+@media (max-width: 350px) {
+  .search { border-radius: 12px; }
+  .search input { font-size: 13px; padding: 10px 12px; }
+  .search button { width: 40px; }
+  .icon { width: 16px; height: 16px; }
+}

@@ -1,0 +1,43 @@
+.hdr {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* distribución más lógica */
+  gap: 24px;
+  padding: 12px 20px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.brand {
+  flex-shrink: 0; /* evita que se deforme */
+}
+
+.brand img {
+  height: 50px;
+  object-fit: contain;
+  display: block;
+}
+
+
+.search-bar-container {
+  flex: 1;               /* ocupa todo el espacio posible */
+  display: flex;
+  justify-content: center; /* centra horizontalmente el buscador */
+}
+
+app-search-bar {
+  width: 100%;
+  max-width: 550px; /* ← antes era 600px */
+  min-width: 250px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hdr { grid-template-columns: auto 1fr auto; gap: 12px; }
+  .search { gap: 6px; }
+  .date { display: none; }
+}

@@ -1,0 +1,15 @@
+<header class="hdr">
+  <!-- Marca -->
+  <div class="brand">
+    <img [src]="logoSrc" [alt]="logoAlt" />
+  </div>
+
+    <!-- Barra de búsqueda -->
+  <div class="search-bar-container">
+    <app-search-bar
+      [placeholder]="'Buscar...'"
+      (search)="onSearch($event)"
+      (queryChange)="onQueryChange($event)">
+    </app-search-bar>
+  </div>
+</header>
